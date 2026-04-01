@@ -230,10 +230,13 @@ End While
 ## Boolean Values
 
 `true`
+
 `false`
 
 Example:
+
 `Declare Boolean isPassing`
+
 `Set isPassing = score >= 60`
 
 ---
