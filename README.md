@@ -15,15 +15,21 @@ Below, you’ll find sections organized in a logical learning order—from basic
 ### Data Types
 
 `Declare Integer count`
+
 `Declare Real average`
+
 `Declare String name`
+
 `Declare Boolean isValid`
 
 ### Assigning Values
 
 `Set count = 10`
+
 `Set average = 85.5`
+
 `Set name = "Ali"`
+
 `Set isValid = true`
 
 ---
@@ -32,16 +38,21 @@ Below, you’ll find sections organized in a logical learning order—from basic
 ### Input
 
 `Input name`
+
 `Input age`
 
 ### Output
 
 `Display "Hello World"`
+
 `Display name`
+
 `Display "Your average is ", average`
 
 Prompting the user:
+
 `Display "Enter your age: "`
+
 `Input age`
 
 ---
@@ -57,7 +68,9 @@ Prompting the user:
 | Mod      | Remainder      |
 
 Example:
+
 `Set total = price * quantity`
+
 `Set remainder = number MOD 2`
 
 ---
