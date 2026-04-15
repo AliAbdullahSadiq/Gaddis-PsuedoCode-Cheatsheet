@@ -359,6 +359,29 @@ While number <= 0
 ```
 
 ---
+## Arrays
+
+Declaration
+```Declare DataType name[size]```
+
+Example
+```clike
+Declare Real temps[5] = 12.4, 18.7, 21.3, 24.8, 16.9
+Set temps[0] = 12.8
+Display temps[3]
+```
+
+Printing array
+```clike
+Declare Integer values[4] = 12. 68, 34, 38
+Declare Intger i = 0
+
+For i = 0 To 3 // 0 To arrayLength - 1
+	Display values[i]
+End For
+```
+
+---
 ## Library Functions
 
 Math Functions
