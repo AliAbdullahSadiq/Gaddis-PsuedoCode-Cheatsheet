@@ -379,6 +379,19 @@ Declare Intger i = 0
 For i = 0 To 3 // 0 To arrayLength - 1
 	Display values[i]
 End For
+
+```
+Passing Arrays to Functions
+```clike
+Declare Integer values[4] = 12. 68, 34, 38
+Declare SIZE = 4
+
+Declare Real avg = CalcAverage(values, SIZE)
+// DO NOT USE [] BRACKETS WHEN PASSING ARRAY TO FUNCTION
+
+Functon Real CalcAverage(vals[], SIZE)
+	// Return Average
+End Function
 ```
 
 ---
