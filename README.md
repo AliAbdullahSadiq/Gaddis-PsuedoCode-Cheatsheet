@@ -307,6 +307,58 @@ Display "Sum is ", sum
 ```
 
 ---
+## Data Validation
+
+Range Check
+```clike
+If age >= 0 AND age <= 120 Then
+    Display "Valid age"
+Else
+    Display "Invalid age"
+End If
+```
+
+Type Check
+```clike
+Input value
+If isInteger(value) Then
+    Display "Valid integer"
+Else
+    Display "Invalid input"
+End If
+```
+
+Presence Check
+```clike
+Input name
+If name <> "" Then
+    Display "Valid name"
+Else
+    Display "Name cannot be empty"
+End If
+```
+
+Sentinel Validation
+```clike
+Set number = -1
+While number <> 0
+    Input number
+    If number <> 0 Then
+        Display "Processing ", number
+    End If
+End While
+```
+
+Post-Test Loop Validation (Re-prompt)
+(will not give an error message)
+```clike
+Do
+    Display "Enter a positive number: "
+    Input number
+While number <= 0
+```
+
+---
 ## Library Functions
 
 Math Functions
