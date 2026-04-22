@@ -411,12 +411,76 @@ Function Integer findLargest(Integer list[], Integer size)
 	Set largest = list[i]
 	
 	For i = 1 To (size-1)
-		If list[i] > largest Then
+		If list[i] > largest Then    // for smallest: use <
 			Set largest = list[i]
 		End If
 	End For
 	
 	Return largest
+End Function
+```
+
+---
+## Searching
+### Linear Search (Sequential Search)
+
+```clike
+Function Integer linearSearch(Integer list[], Integer size, Integer target)  
+    Declare Integer i  
+      
+    For i = 0 To size - 1  
+        If list[i] == target Then  
+            Return i    // position where found  
+        End If  
+    End For  
+      
+    Return -1   // not found  
+End Function
+```
+
+If you need to search in main (can't use Functions):
+```clike
+Declare Boolean found = false
+
+While i < size AND NOT found 
+	If values[i] == target Then  
+		Set found = true  
+	Else  
+		Set i = i + 1  
+	End If  
+End While  
+  
+If found == true Then  
+	Display "Found at index ", i  
+Else  
+	Display "Not found"  
+End If
+```
+
+### Binary Search
+
+**IMPORTANT:** Array must be sorted.
+
+```clike
+Function Integer binarySearch(Integer list[], Integer size, Integer target)  
+    Declare Integer low, high, mid  
+      
+    Set low = 0  
+    Set high = size - 1  
+      
+    While low <= high  
+        Set mid = (low + high) / 2  
+          
+        If list[mid] == target Then  
+            Return mid  
+        Else If list[mid] < target Then  
+            Set low = mid + 1  
+        Else  
+            Set high = mid - 1  
+        End If  
+    End While  
+      
+    Return -1  
 End Function
 ```
 
