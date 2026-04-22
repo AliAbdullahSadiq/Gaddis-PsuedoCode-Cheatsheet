@@ -15,21 +15,15 @@ Below, you’ll find sections organized in a logical learning order—from basic
 ### Data Types
 
 `Declare Integer count`
-
 `Declare Real average`
-
 `Declare String name`
-
 `Declare Boolean isValid`
 
 ### Assigning Values
 
 `Set count = 10`
-
 `Set average = 85.5`
-
 `Set name = "Ali"`
-
 `Set isValid = true`
 
 ---
@@ -38,21 +32,16 @@ Below, you’ll find sections organized in a logical learning order—from basic
 ### Input
 
 `Input name`
-
 `Input age`
 
 ### Output
 
 `Display "Hello World"`
-
 `Display name`
-
 `Display "Your average is ", average`
 
 Prompting the user:
-
 `Display "Enter your age: "`
-
 `Input age`
 
 ---
@@ -68,9 +57,7 @@ Prompting the user:
 | Mod      | Remainder      |
 
 Example:
-
 `Set total = price * quantity`
-
 `Set remainder = number MOD 2`
 
 ---
@@ -103,7 +90,7 @@ Example: `If age >= 18 AND citizen = true Then`
 
 ### Basic If
 
-```
+```clike
 If condition Then
 	statements
 End If
@@ -111,7 +98,7 @@ End If
 
 ### If Else
 
-```
+```clike
 If condition Then
 	statements
 Else
@@ -121,7 +108,7 @@ End If
 
 ### If Else If
 
-```
+```clike
 If score >= 90 Then
 	Display "A"
 Else If score >= 80 Then
@@ -133,7 +120,7 @@ End If
 
 ### Nested If
 
-```
+```clike
 If age >= 18 Then
 	If citizen = true Then
 		Display "Eligible"
@@ -146,14 +133,14 @@ End If
 
 ### While Loop (Pre-Test)
 
-```
+```clike
 While condition
 	statements
 End While
 ```
 
 Example:
-```
+```clike
 Set count = 0
 While count < 5
 	Display count
@@ -163,14 +150,14 @@ End While
 
 ### Do-While Loop (Post-Test)
 
-```
+```clike
 Do
 	statements
 While condition
 ```
 
 Example:
-```
+```clike
 Do
 	Input number
 While number < 0
@@ -178,21 +165,21 @@ While number < 0
 
 ### For Loop (Count-Controlled)
 
-```
+```clike
 For variable = start To end
 	statements
 End For
 ```
 
 Example: 
-```
+```clike
 For count = 1 To 10
 	Display count
 End For
 ```
 
 With step:
-```
+```clike
 For count = 10 To 1 Step -1
 	Display count
 End For
@@ -200,7 +187,7 @@ End For
 
 ### Sentinel Loop
 
-```
+```clike
 Set number = -1
 While number <> 0
 Input number
@@ -209,7 +196,7 @@ End While
 
 ### Accumulator Pattern
 
-```
+```clike
 Set total = 0
 For count = 1 To 5
 	Input number
@@ -219,7 +206,7 @@ End For
 
 ### Counter Pattern
 
-```
+```clike
 Set count = 0
 While count < 10
 	Set count = count + 1
@@ -230,26 +217,23 @@ End While
 ## Boolean Values
 
 `true`
-
 `false`
 
 Example:
-
 `Declare Boolean isPassing`
-
 `Set isPassing = score >= 60`
 
 ---
 ## Modules
 
-```
+```clike
 Module name(datatype parameters)
 	statements
 End Module
 ```
 
 Example:
-``` 
+``` clike
 Module main()
 	Call displayHello("Comp-126")
 End Module
@@ -260,13 +244,13 @@ End Module
 ```
 
 Passing by Reference:
-```
+```clike
 Module name(Ref variable)
 	statements
 End Module
 ```
 Example:
-```
+```clike
 Module main()
 	Declare Real radius, area
 	Display "Enter a radius: "
@@ -283,7 +267,7 @@ End Module
 ---
 ## User Defined Functions
 
-```
+```clike
 Function ReturnType name(parameters)
     statements
     Return value
@@ -291,7 +275,7 @@ End Function
 ```
 
 Example:
-```
+```clike
 Function Integer addNumbers(Integer a, Integer b)
     Declare Integer result
     Set result = a + b
@@ -300,7 +284,7 @@ End Function
 ```
 
 Calling a Function:
-```
+```clike
 Declare Integer sum
 Set sum = addNumbers(5, 3)
 Display "Sum is ", sum
@@ -359,6 +343,30 @@ While number <= 0
 ```
 
 ---
+## Library Functions
+
+Math Functions
+```clike
+abs(x)
+round(x)
+pow(x,y)
+sqrt(x)
+random(x,y)    // inclusive of x and y
+toInteger(x)
+toReal(x)
+```
+
+String Functions
+```clike
+length(s)
+toUpper(s)
+toLower(s)
+substring(s,b,e)    // returns part of string from index b to e
+contains(s1,s2)
+indexOf(s, sub)     // position of substring
+concat(s1, s2)      // joins strings
+```
+---
 ## Arrays
 
 Declaration
@@ -379,8 +387,8 @@ Declare Intger i = 0
 For i = 0 To 3 // 0 To arrayLength - 1
 	Display values[i]
 End For
-
 ```
+
 Passing Arrays to Functions
 ```clike
 Declare Integer values[4] = 12. 68, 34, 38
@@ -395,28 +403,21 @@ End Function
 ```
 
 ---
-## Library Functions
+## Finding min/max
 
-Math Functions
-```
-abs(x)
-round(x)
-pow(x,y)
-sqrt(x)
-random(x,y)    // inclusive of x and y
-toInteger(x)
-toReal(x)
-```
-
-String Functions
-```
-length(s)
-toUpper(s)
-toLower(s)
-substring(s,b,e)    // returns part of string from index b to e
-contains(s1,s2)
-indexOf(s, sub)     // position of substring
-concat(s1, s2)      // joins strings
+```clike
+Function Integer findLargest(Integer list[], Integer size)
+	Declare largest, i
+	Set largest = list[i]
+	
+	For i = 1 To (size-1)
+		If list[i] > largest Then
+			Set largest = list[i]
+		End If
+	End For
+	
+	Return largest
+End Function
 ```
 
 ---
@@ -431,7 +432,7 @@ Process data
 Display results
 
 Example: 
-```
+```clike
 Declare Real average
 Declare Real total
 Declare Integer count
