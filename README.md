@@ -483,6 +483,79 @@ Function Integer binarySearch(Integer list[], Integer size, Integer target)
     Return -1  
 End Function
 ```
+---
+## Classes
+
+```clike
+myCar = new Car
+
+myCar.Color = "white"
+
+myCar.start()
+```
+
+Example:
+```clike
+Class Employee
+	// attributes (fields)
+	Private Integer id    // notice no Declare
+	Private String name
+	Private Real payRate
+	
+	// methods
+	// constructor
+	Public Module Employee(Integer newId, String newName, Real NewPayRate)
+		Set id = newId
+		Set name = newName
+		Set payRate = newPayRate
+	End Module
+	
+	// Mutators (Setters)
+	Public Module setId(Integer newId)
+		Set id = newId
+	End Module
+	Public Module setName(String newName)
+		Set name = newName
+	End Module
+	Public Module setPayRate(Real newPayRate)
+		Set payRate = newPayRate
+	End Module
+	
+	// Accessors (Getters)
+	Public Function getId()
+		return id
+	End Function
+	Public Function getName()
+		return name
+	End Function
+	Public Function getPayRate()
+		return payRate
+	End Function
+	
+	// Other methods
+	Public Module giveRaise(Real raise)
+		payrate = payRate + raise
+	End Module
+	
+End Class
+
+Module main()
+	Set emp1 = new Employee(10, "Sally", 20.35)
+	
+	Display "Id: ", emp1.getId()
+	Display "Name: ", emp1getName()
+	Display "Pay Rate: ", emp1.getPayRate()
+End Module
+```
+
+UML Diagram:
+
+| Employee                                                                                                                                                                                                                                                       |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -id:int<br>-name:string<br>-payRate:Real                                                                                                                                                                                                                       |
+| +Employee(id:int, name:string, payRate:real)<br><br>+setId(newId:int):void  <br>+setName(newName:string):void  <br>+setPayRate(newPayRate:real):void  <br>  <br>+getId():int  <br>+getName():string  <br>+getPayRate():real<br><br>+giveRaise(raise:real):void |
+`-` means Private
+`+` means Public
 
 ---
 ## Basic Program Structure
